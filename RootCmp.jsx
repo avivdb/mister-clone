@@ -2,7 +2,7 @@ const Router = ReactRouterDOM.HashRouter
 const { Route, Routes } = ReactRouterDOM
 
 import { Home } from './pages/Home.jsx'
-
+import { ContactIndex } from './pages/ContactIndex.jsx'
 
 export function App() {
     return (
@@ -11,8 +11,8 @@ export function App() {
 
                 <main className='container'>
                     <Routes>
-                        <Route path="/" element={<Home />} />
-
+                        {/* <Route path="/" element={<Home />} /> */}
+                        <Route path="/" element={<ContactIndex />} />
                     </Routes>
                 </main>
             </div>
