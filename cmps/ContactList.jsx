@@ -14,7 +14,7 @@ export function ContactList({ contacts, onRemoveContact, onEditContact }) {
                         <button onClick={() => onRemoveContact(contact._id)}>x</button>
                         <button onClick={() => onEditContact(contact)}>Edit</button>
                     </div>
-                    {/* <Link to={`/${contact._id}`}>Details</Link> */}
+                    <Link to={`/${contact._id}`}>Details</Link>
                 </li>
             ))
             }
