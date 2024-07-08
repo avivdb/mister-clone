@@ -3,6 +3,8 @@ import { loadContacts, removeContact, saveContact } from '../store/actions/conta
 
 
 import { ContactList } from '../cmps/ContactList.jsx'
+import { ContactFilter } from '../cmps/ContactFilter.jsx'
+
 
 const { useState, useEffect } = React
 const { useSelector } = ReactRedux
@@ -43,12 +45,11 @@ export function ContactIndex() {
     }
 
 
-
-
     return (
         <main>
+            <h3>Contacts App</h3>
             <section className='info-actions'>
-                <h3>Contacts App</h3>
+                <ContactFilter filterBy={filterBy} onSetFilter={onSetFilter}/>
                 <button onClick={onAddContact}>Add Contact 👤</button>
             </section>
             <main>

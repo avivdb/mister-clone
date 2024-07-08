@@ -16,9 +16,18 @@ export const contactService = {
 }
 
 
-function query() {
+function query(filterBy = {}) {
+    if (!filterBy.name) filterBy.name = ''
+    const regExp = new RegExp(filterBy.name, 'i')
     return storageService.query(STORAGE_KEY)
+        .then(contacts => {
+            return contacts.filter(contact =>
+                regExp.test(contact.name)
+            )
+        })
 }
+
+
 function getById(contactId) {
     return storageService.get(STORAGE_KEY, contactId)
 }

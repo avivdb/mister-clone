@@ -35,14 +35,6 @@ a {
     all: unset;
 }
 
-.contact-preview {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-
-    padding: 1rem;
-}
-
 button {
     all: unset;
     cursor: pointer;
@@ -66,7 +58,6 @@ input {
 
 .contact-list {
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
     gap: 1rem;
 }
 
@@ -94,5 +85,33 @@ form button {
     padding: 0.5rem;
     padding-block-end: 0;
     background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.info-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-actions>*:first-child {
+    padding: 0.3rem;
+    background-color: rgb(173, 199, 230);
+    border-radius: 10px;
+    margin-inline-start: 1rem;
+}
+
+.contact-preview {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    padding: 1rem;
+}
+
+.contact-preview h1 {
+    background-color: rgba(247, 240, 240, 0.677);
+    padding: 0.3rem;
+    padding-block: 0.7rem;
     border-radius: 10px;
 }

@@ -3,7 +3,8 @@ export const utilService = {
     makeLorem,
     getRandomIntInclusive,
     loadFromStorage,
-    saveToStorage
+    saveToStorage,
+    debounce
 }
 
 function makeId(length = 6) {
@@ -42,4 +43,14 @@ function loadFromStorage(keyDB) {
 function saveToStorage(keyDB, val) {
     const valStr = JSON.stringify(val)
     localStorage.setItem(keyDB, valStr)
+}
+
+function debounce(func, timeout = 300) {
+    let timer
+    return (...args) => {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            func.apply(this, args)
+        }, timeout)
+    }
 }
