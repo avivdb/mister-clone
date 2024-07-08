@@ -42,16 +42,7 @@ export function ContactIndex() {
             })
     }
 
-    function onEditContact(contact) {
-        const tel = prompt('New tel?')
-        const contactToSave = { ...contact, tel }
 
-        saveContact(contactToSave)
-
-            .catch(err => {
-                console.log('Cannot update contact', err)
-            })
-    }
 
 
     return (
