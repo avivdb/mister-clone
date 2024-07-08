@@ -10,8 +10,6 @@ const { useSelector } = ReactRedux
 
 export function ContactIndex() {
     const contacts = useSelector(storeState => storeState.contacts)
-    // const dispatch = useDispatch()
-
 
     const [filterBy, setFilterBy] = useState(contactService.getDefaultFilter())
 
@@ -45,8 +43,8 @@ export function ContactIndex() {
     }
 
     function onEditContact(contact) {
-        const price = +prompt('New price?')
-        const contactToSave = { ...contact, price }
+        const tel = prompt('New tel?')
+        const contactToSave = { ...contact, tel }
 
         saveContact(contactToSave)
 

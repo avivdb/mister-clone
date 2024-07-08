@@ -29,7 +29,7 @@ function appReducer(state = initialState, cmd = {}) {
         case ADD_CONTACT:
             return {
                 ...state,
-                contacts: [...state.contacts, cmd.contact]
+                contacts: [cmd.contact, ...state.contacts]
             }
         case UPDATE_CONTACT:
             return {
