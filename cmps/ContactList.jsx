@@ -3,7 +3,7 @@ const { Link } = ReactRouterDOM
 import { ContactPreview } from '../cmps/ContactPreview.jsx'
 import { ContactEdit } from './ContactEdit.jsx'
 
-export function ContactList({ contacts, onRemoveContact, onEditContact }) {
+export function ContactList({ contacts, onRemoveContact }) {
 
     if (!contacts) return <div>Loading...</div>
     return (

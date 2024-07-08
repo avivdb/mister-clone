@@ -52,7 +52,7 @@ export function ContactIndex() {
                 <button onClick={onAddContact}>Add Contact 👤</button>
             </section>
             <main>
-                <ContactList contacts={contacts} onRemoveContact={onRemoveContact} onEditContact={onEditContact} />
+                <ContactList contacts={contacts} onRemoveContact={onRemoveContact} />
             </main>
         </main>
     )
