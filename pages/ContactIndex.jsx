@@ -2,7 +2,7 @@ import { contactService } from '../services/contact.service.js'
 import { loadContacts, removeContact, saveContact } from '../store/actions/contact.actions.js'
 
 
-import { ContactList } from '../cmp/ContactList.jsx'
+import { ContactList } from '../cmps/ContactList.jsx'
 
 const { useState, useEffect } = React
 const { useSelector } = ReactRedux
@@ -57,14 +57,14 @@ export function ContactIndex() {
 
 
     return (
+        <main>
+            <section className='info-actions'>
+                <h3>Contacts App</h3>
+                <button onClick={onAddContact}>Add Contact 👤</button>
+            </section>
             <main>
-                <section className='info-actions'>
-                    <h3>Contacts App</h3>
-                    <button onClick={onAddContact}>Add Contact 👤</button>
-                </section>
-                <main>
-                    <ContactList contacts={contacts} onRemoveContact={onRemoveContact} onEditContact={onEditContact} />
-                </main>
+                <ContactList contacts={contacts} onRemoveContact={onRemoveContact} onEditContact={onEditContact} />
             </main>
+        </main>
     )
 }
