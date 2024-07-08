@@ -1,0 +1,27 @@
+ul,
+li {
+    all: unset;
+}
+
+li {
+    margin-block-start: 1rem;
+    background-color: rgb(214, 233, 249);
+    border-radius: 10px;
+}
+
+.contact-preview {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    width: 10rem;
+    padding: 1rem;
+}
+
+button {
+    all: unset;
+    background-color: rgb(173, 199, 230);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
