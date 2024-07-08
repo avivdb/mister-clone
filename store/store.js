@@ -51,3 +51,7 @@ function appReducer(state = initialState, cmd = {}) {
 export const store = createStore(appReducer)
 
 
+window.gStore = store
+
+
+

@@ -11,6 +11,8 @@ export const contactService = {
     getById,
     save,
     remove,
+    getDefaultFilter,
+    getEmptyContact
 }
 
 
@@ -30,6 +32,18 @@ function save(contact) {
         return storageService.put(STORAGE_KEY, contact)
     } else {
         return storageService.post(STORAGE_KEY, contact)
+    }
+}
+
+function getDefaultFilter() {
+    return { name: ''}
+}
+
+
+function getEmptyContact() {
+    return {
+        name: 'Muki',
+        tel: '890',
     }
 }
 
