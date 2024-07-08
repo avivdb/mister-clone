@@ -1,6 +1,6 @@
 const { Link } = ReactRouterDOM
 
-// import { ContactPreview } from './ContactPreview.jsx'
+import { ContactPreview } from '../cmps/ContactPreview.jsx'
 
 export function ContactList({ contacts, onRemoveContact, onEditContact }) {
 
@@ -9,7 +9,7 @@ export function ContactList({ contacts, onRemoveContact, onEditContact }) {
         <ul className="contact-list">
             {contacts.map((contact) => (
                 <li className="contact-preview" key={contact._id}>
-                    {/* <ContactPreview contact={contact} /> */}
+                    <ContactPreview contact={contact} />
                     <div>
                         <button onClick={() => onRemoveContact(contact._id)}>x</button>
                         <button onClick={() => onEditContact(contact)}>Edit</button>
