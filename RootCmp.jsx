@@ -20,7 +20,6 @@ export function App() {
                             {/* <Route path="/" element={<Home />} /> */}
                             <Route path="/" element={<ContactIndex />} />
                             <Route path="/:contactId" element={<ContactDetails />} />
-
                         </Routes>
                     </main>
                 </div>

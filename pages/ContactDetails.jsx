@@ -20,11 +20,12 @@ export function ContactDetails() {
     }, [])
 
     if (!contact) return <h1>loadings....</h1>
-    return contact && <div>
-        <h3>Contact Details 👤</h3>
+    return contact && <div className="contact-details">
+        <h3>Contact Details</h3>
+        <h3>👤</h3>
         <h4>{contact.name}</h4>
         <p>Tel: <span>{contact.tel}</span></p>
-        <Link to="/">Back to List</Link>
+        <button><Link to="/">Back to List</Link></button>
     </div>
 
 }
